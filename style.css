@@ -1,0 +1,101 @@
+* {
+  border: 0;
+  margin: 0;
+  box-sizing: 0;
+}
+body {
+  background-image: linear-gradient(120deg, #ff7b00, #ffa652);
+  color: white;
+  min-height: 100vh;
+  font-family: "Poppins", sans-serif;
+}
+h1 {
+  font-size: 2.5rem;
+}
+h1,
+form {
+  min-height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+form input,
+form button,
+form select {
+  padding: 0.5rem;
+  border: none;
+  font-size: 1.2rem;
+  background: white;
+}
+.select {
+  margin: 1rem;
+}
+form button {
+  color: #ff7b00;
+}
+form button:hover {
+  background: #fd3b00;
+  color: white;
+}
+.todo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.todo-list {
+  min-width: 30%;
+  list-style: none;
+}
+.todo {
+  display: flex;
+  justify-content: space-between;
+  margin: 0.5rem;
+  background: white;
+  color: black;
+  transition: all 0.3s ease;
+}
+.todo li {
+  text-align: start;
+  padding: 0.5rem;
+  flex: 1;
+}
+.trash-btn,
+.completed-btn {
+  padding: 1rem;
+  cursor: pointer;
+}
+.completed-btn {
+  background: rgb(38, 180, 38);
+}
+.trash-btn {
+  background: #fd3b00;
+}
+.fa-trash,
+.fa-check {
+  pointer-events: none;
+}
+.completed {
+  text-decoration: line-through;
+  opacity: 0.6;
+}
+.fall {
+  transform: translateY(10rem) rotateZ(30deg);
+  opacity: 0;
+}
+.select {
+  position: relative;
+}
+.select::after {
+  position: absolute;
+  content: "\25BC";
+  top: 0;
+  right: 0;
+  color: white;
+  background: #fd3b00;
+  pointer-events: none;
+  padding: 0.5rem;
+}
+.select:hover::after {
+  background: white;
+  color: #fd3b00;
+}
